@@ -1,0 +1,85 @@
+<html>
+    <head>
+        <title>Get a Festival Playlist | A Python App by Christine Osazuwa</title>
+        <link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+    </head>
+    <body>
+        <div id="container">
+            <div class="title">
+                <h1>Get A Festival Playlist</h1>
+            </div>
+            <div id="content">
+
+				<p>Use this app to create a Spotify playlist of the top tracks from each artist that played different festivals from 2014-2016. Once you hit submit, the playlist will automatically be created for you in Spotify (it'll take a while...). Just open it up to see it!
+				(Due to server limitations, it will only add 10 songs... Sorry!)</p>
+				<form class="form-horizontal" method="post" action="{{ url_for('hello') }}">
+					<fieldset>
+
+					<!-- Form Name -->
+					<legend>Form Name</legend>
+
+					<!-- Select Basic -->
+					<div class="form-group">
+					  <label class="col-md-4 control-label" for="fest1">Select Festival</label>
+					  <div class="col-md-4">
+						<select id="fest1" name="fest1" class="form-control">
+						  <option value="warped">Vans Warped Tour</option>
+						  <option value="bealestreet">The Beale Street Music Festival</option>
+						  <option value="coachella">Coachella Valley Music and Arts Festival</option>
+						  <option value="electricdaisycarnival">Electric Daisy Carnival Las Vegas</option>
+						  <option value="madeinamerica">Budweiser Made in America Festival</option>
+						  <option value="ultra">Ultra Music Festival Miami</option>
+						  <option value="hangoutfest">Hangout Music Festival</option>
+						  <option value="riotfest">Riot Fest Chicago</option>
+						  <option value="firefly">Firefly Music Festival</option>
+						  <option value="bonnaroo">Bonnaroo Music and Arts Festival</option>
+						  <option value="lollapalooza">Lollapalooza Chicago</option>
+						  <option value="pitchfork">Pitchfork Music Festival</option>
+						  <option value="austincitylimits">Austin City Limits</option>
+						  <option value="sasquatch">Sasquatch! Music Festival</option>
+						  <option value="newportfolk">Newport Folk Festival</option>
+						  <option value="governorsball">Governors Ball Music Festival</option>
+						  <option value="voodoo">VooDoo Music and Arts Festival</option>
+						  <option value="outsidelands">Outside Lands Music and Arts Festival</option>
+						</select>
+					  </div>
+					</div>
+
+
+					<!-- Select Basic -->
+					<div class="form-group">
+					  <label class="col-md-4 control-label" for="year">Select Year</label>
+					  <div class="col-md-4">
+						<select id="year" name="year" class="form-control">
+						  <option value="2014">2014</option>
+						  <option value="2015">2015</option>
+						  <option value="2016">2016</option>
+						</select>
+					  </div>
+					</div><br>
+
+					
+					<!-- Button -->
+					<div class="form-group">
+					  <div class="col-md-4">
+						<button id="singlebutton" name="singlebutton" class="btn btn-primary" type="submit">Submit</button>
+					  </div>
+					</div>
+
+					</fieldset>
+					</form>
+
+					<!-- Copyright Text --> 
+					  <br>	
+					  <hr>
+					  <div class="copyright">Copyright &copy; <script>document.write(new Date().getFullYear())</script> <a href="http://christineosazuwa.com">Christine Osazuwa</a><br>
+					  Written in Python 2.7, Powered by <a href="http://heroku.com" target="_blank">Heroku</a> & Flask | <a href="https://github.com/christineosazuwa/spotify-festival-playlists" target="_blank">View on GitHub</a><br>
+						<strong>Other Music Apps:</strong> <a href="https://will-they-play.herokuapp.com/">Who Played?</a> | <a href="https://will-they-play.herokuapp.com/">Would They Play?</a>
+					  </div>        
+					<!-- End Copyright Text -->   
+		  
+            </div>
+        </div>
+    </body>
+</html>
+ 

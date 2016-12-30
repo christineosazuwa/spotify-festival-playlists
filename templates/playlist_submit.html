@@ -1,0 +1,28 @@
+ <html>
+    <head>
+        <title>Get a Festival Playlist | A Python App by Christine Osazuwa</title>
+        <link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+    </head>
+    <body>
+        <div id="container">
+            <div class="title">
+                <h1>Playlist Created!</h1>
+            </div>
+            <div id="content">
+				<strong>Festival:</strong> {{fest1name}}<br>
+                <strong>Year:</strong> {{year}}<br><br>
+				
+				<p>Open Spotify to see your new "{{fest1name}} {{year}}" playlist!</p>
+				
+            </div>
+					<!-- Copyright Text --> 
+					  <br>	
+					  <hr>
+					  <div class="copyright">Copyright &copy; <script>document.write(new Date().getFullYear())</script> <a href="http://christineosazuwa.com">Christine Osazuwa</a><br>
+					  Written in Python 2.7, Powered by <a href="http://heroku.com" target="_blank">Heroku</a> & Flask | <a href="https://github.com/christineosazuwa/spotify-festival-playlists" target="_blank">View on GitHub</a><br>
+						<strong>Other Music Apps:</strong> <a href="https://will-they-play.herokuapp.com/">Would They Play?</a> | <a href="https://will-they-play.herokuapp.com/">Would They Play?</a>
+					  </div>        
+					<!-- End Copyright Text -->   
+        </div>
+    </body>
+</html>
