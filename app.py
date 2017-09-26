@@ -34,6 +34,12 @@ def get_spotify(auth_token=None):
         token_info = oauth.get_access_token(auth_token)
     return spotipy.Spotify(token_info["access_token"])
 
+def refresh_token():
+    try:
+        os.remove(".tokens")
+    except OSError:
+        pass
+
 def id_search(band):
     sp = get_spotify()
     return sp.search(q=band, limit=1, type='artist')['artists']['items'][0]['id']
@@ -89,6 +95,7 @@ def new_playlist(fest1, year):
 @app.route("/")
 def index():
     """Redirect user to Spotify login/auth."""
+    refresh_token()
     sp_oauth = get_oauth()
     return redirect(sp_oauth.get_authorize_url())
     #return render_template("playlist.html")
